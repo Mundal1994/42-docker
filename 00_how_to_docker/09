@@ -1,11 +1,4 @@
-docker volume create --name spawning-pool -e MYSQL_ROOT_PASSWORD=Kerrigan -d mysql:tag --restart unless-stopped
-docker run -it -h spawning-pool --volumes-from hatchery debian /bin/bash
-docker-compose up -d //run in detached mode
-
-
-docker run --detach --name spawning-pool --env="MYSQL_ROOT_PASSWORD=Kerrigan" --volume=/storage/docker/volumes/hatchery:/var/lib/mysql --restart unless-stopped mysql
-
-
 docker run --name spawning-pool -e MYSQL_ROOT_PASSWORD=Kerrigan -e MYSQL_DATABASE=zerglings --volume=/storage/docker/volumes/hatchery:/var/lib/mysql --restart unless-stopped -d mysql:latest
 
-docker run --name spawning-pool -e MYSQL_ROOT_PASSWORD=Kerrigan -e MYSQL_DATABASE=zerglings --volume=/storage/docker/volumes/hatchery:/var/lib/mysql --restart unless-stopped -d mysql:latest
+Not sure if volume and path to hatchery is correct
+--volume=/storage/docker/volumes/hatchery:/var/lib/mysql
