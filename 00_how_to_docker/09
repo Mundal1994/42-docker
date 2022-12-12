@@ -1,4 +1,9 @@
-docker run --name spawning-pool -e MYSQL_ROOT_PASSWORD=Kerrigan -e MYSQL_DATABASE=zerglings --volume=/storage/docker/volumes/hatchery:/var/lib/mysql --restart unless-stopped -d mysql:latest
+docker run --name spawning-pool -e MYSQL_ROOT_PASSWORD=Kerrigan -e MYSQL_DATABASE=zerglings --restart unless-stopped --volume=/var/lib/docker/volumes/hatchery/_data:/var/lib/mysql -d mysql:latest
+
+
+Last tried
+docker run --name spawning-pool -e MYSQL_ROOT_PASSWORD=Kerrigan -e MYSQL_DATABASE=zerglings --restart unless-stopped --volume=./mysql-data:/var/lib/mysql --volume=/var/lib/mysql/_data:/var/lib/docker/volumes/hatchery -d mysql:latest
+
 
 Not sure if volume and path to hatchery is correct
 --volume=/storage/docker/volumes/hatchery:/var/lib/mysql
