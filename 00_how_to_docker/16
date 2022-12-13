@@ -1,0 +1,9 @@
+echo 'from flask import Flask
+app = Flask(__name__)
+@app.route("/")
+def hello_world():
+    return "<h1>Hello World</h1>"' > ~/script.py
+docker run --name Abathur -v ~/:/root -p 3000:3000 -it -d python:2-slim
+docker exec Abathur pip install Flask
+docker exec -e FLASK_APP=/root/script.py Abathur flask run -h "0.0.0.0" -p 3000
+rm ~/script.py
