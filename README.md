@@ -14,4 +14,5 @@ Consist of two parts.
   - Introduction to Docker and its main options.
 - 01_dockerfiles
   - Focus on making containers for own own applications
-  work in progess...
+
+work in progess...
