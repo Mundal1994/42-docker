@@ -10,9 +10,8 @@ Learn to think in containers through this subject in which you will handle docke
 
 Consist of two parts.
 
-00_how_to_docker
-- Introduction to Docker and its main options.
-
-01_dockerfiles
-- Focus on making containers for own own applications
+- 00_how_to_docker
+  - Introduction to Docker and its main options.
+- 01_dockerfiles
+  - Focus on making containers for own own applications
   work in progess...
