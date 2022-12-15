@@ -1,0 +1,6 @@
+#On VM
+docker swarm leave --force
+docker swarm init
+
+#On school computer terminal (output from VM)
+docker swarm join --token SWMTKN-1-63gsmiq44siat9gdx7vhp6kvpfn644u16nq319jewv4bzv7k16-ceqsx7jfikq82j8wmbbe5qfbk 192.168.226.70:2377

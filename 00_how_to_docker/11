@@ -1,5 +1,7 @@
 # don't think this one connects with the VM network
 docker run --name lair -p 8080:80 --link spawning-pool:mysql -d wordpress
 
-# seen somewhere they  wrote IP:8080:80
-docker run --name lair -p 8080:80 -e WORDPRESS_DB_HOST='spawning-pool' -e WORDPRESS_DB_USER='root' -e WORDPRESS_DB_PASSWORD=Kerrigan -e WORDPRESS_DB_NAME=zerglings -d wordpress
+#-e WORDPRESS_DB_HOST='spawning-pool'
+#-e WORDPRESS_DB_USER='root'
+#-e WORDPRESS_DB_PASSWORD=Kerrigan
+#-e WORDPRESS_DB_NAME=zerglings
